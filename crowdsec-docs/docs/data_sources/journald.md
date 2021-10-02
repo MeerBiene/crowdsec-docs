@@ -14,11 +14,13 @@ To monitor SSH logs from journald:
 source: journalctl
 journalctl_filters:
  - _SYSTEMD_UNIT=ssh.service
+labels:
+  type: journald
 ```
 
 ## Parameters
 
-### `journalctl_filters`
+### `journalctl_filter`
 
 A list of journalctl filters. This is mandatory.
 
